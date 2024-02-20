@@ -11,7 +11,7 @@ class ExcelValidatorUI:
         )
 
     def display_header(self):
-        st.title("Validador de schema excel?")
+        st.title("Mudei esse trem")
 
     def upload_file(self):
         return st.file_uploader("Carregue vosso arquivo Excel aqui", type=["xlsx"])
