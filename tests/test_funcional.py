@@ -3,7 +3,6 @@ from time import sleep
 import pytest
 import subprocess
 from selenium.webdriver.common.by import By
-import os
 from selenium.webdriver.firefox.options import Options
 
 @pytest.fixture
@@ -20,5 +19,20 @@ def driver():
 
 def test_app_opens(driver):
     driver.get("http://localhost:8501")
+    sleep(5)
+    
+
+def test_check_title_is(driver):
+    driver.get("http://localhost:8501")
     sleep(2)
-    # page_title = driver.title
+    page_title = driver.title
+
+    expected_title = "Meu app"
+    assert page_title == expected_title
+
+def test_check_streamlit_h1(driver):
+    driver.get("http://localhost:8501")
+    sleep(2)
+    h1_element = driver.find_element(By.TAG_NAME, "h1")
+    expected_text = "Carregue vosso arquivo Excel aqui"
+    assert h1_element.text == expected_text
