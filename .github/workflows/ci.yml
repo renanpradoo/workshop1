@@ -1,9 +1,15 @@
 name: ci
 
 on: pull_request
+jobs:
     test:
-        runs-on: ubunto-latest
-
+        runs-on: ubuntu-latest
         steps:
             - name: primeira CS nossa
-                run: echo hello world
+              run: echo hello world
+
+            - name: o que tem aqui
+              run: echo $(ls)
+
+            - name: qual diretorio
+              run: echo $(pwd)
