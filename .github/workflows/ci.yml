@@ -4,12 +4,18 @@ on: pull_request
 jobs:
     test:
         runs-on: ubuntu-latest
-        steps:
-            - name: primeira CS nossa
-              run: echo hello world
+        strategy:
+            matrix:
+                python-version: [3.9, 3.10, 3.11, 3.12]
 
-            - name: o que tem aqui
-              run: echo $(ls)
+        steps:
+            - name: Baixar repositório
+              uses: actions/checkout@v4
+
+            - name: Instalar o Python
+              uses: actions/setup-python@5
+              with:
+                python-version: ${{matrix.python-version}}
 
             - name: qual diretorio
               run: echo $(pwd)
