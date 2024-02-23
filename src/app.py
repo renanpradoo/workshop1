@@ -14,7 +14,7 @@ def main():
         if errors:
             ui.display_wrong_message()
         elif ui.display_save_button():
-            excel_to_sql()
+            excel_to_sql(df)
             ui.display_success_message()
             
 if __name__ == "__main__":

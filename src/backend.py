@@ -37,7 +37,7 @@ def process_excel(uploaded_file):
         return df, False, str(ve)
     except Exception as e:
         # Se houver excecao, retorna o erro e um df vazio
-        return pd.DataFrame(), f"Erro inesperado: {str(e)}"
+        return df, False, f"Erro inesperado: {str(e)}"
     
 def excel_to_sql(df):
     df.to_sql('vendas', con=DATABASE_URL, if_exists='replace', index=False)
