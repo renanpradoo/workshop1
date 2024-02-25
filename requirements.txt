@@ -85,4 +85,3 @@ watchdog==4.0.0
 wsproto==1.2.0
 zipp==3.17.0
 psycopg2-binary==2.9.9
-psycopg2==2.9.9
