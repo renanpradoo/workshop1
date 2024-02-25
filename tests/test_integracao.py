@@ -21,7 +21,7 @@ def test_read_data_and_check_schema():
 
     expected_dtype = {
         'email':'object',
-        'data':'datetime',
+        'data':'datetime64[ns]',
         'valor':'float64',
         'quantidade':'int64',
         'produto':'object',

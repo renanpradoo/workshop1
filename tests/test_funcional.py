@@ -27,7 +27,7 @@ def test_check_title_is(driver):
     sleep(2)
     page_title = driver.title
 
-    expected_title = "Meu app"
+    expected_title = "Validador de schema excel"
     assert page_title == expected_title
 
 def test_check_streamlit_h1(driver):
