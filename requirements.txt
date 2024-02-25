@@ -44,8 +44,6 @@ pillow==10.2.0
 platformdirs==4.2.0
 pluggy==1.4.0
 protobuf==4.25.3
-psycopg2-binary==2.9.9
-psycopg2==2.9.9
 pyarrow==15.0.0
 pycparser==2.21
 pydantic==2.6.1
@@ -86,3 +84,5 @@ validators==0.22.0
 watchdog==4.0.0
 wsproto==1.2.0
 zipp==3.17.0
+psycopg2-binary==2.9.9
+psycopg2==2.9.9
